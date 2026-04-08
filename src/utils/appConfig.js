@@ -2,16 +2,31 @@ const env = import.meta.env
 
 const getEnv = (key, fallback = '') => env[key] ?? fallback
 
+// Base dinámica de Vite (incluye nombre del repo en producción)
+const base = import.meta.env.BASE_URL
+
+// Helper para evitar rutas absolutas que rompen en GitHub Pages
+const withBase = (path) => {
+  if (!path) return ''
+  // Si ya es URL completa, no modificar
+  if (path.startsWith('http://') || path.startsWith('https://')) return path
+  // Quitar "/" inicial si existe y concatenar base
+  return `${base}${path.replace(/^\/+/, '')}`
+}
+
 export const appConfig = {
-  logoUrl: getEnv('VITE_LOGO_URL', '/logo/Logo.png'),
-  ModularHomesUrl: getEnv('VITE_MODULAR_HOMES_URL', '/logo/ModularHomes.png'),
-  LogoModularHomesUrl: getEnv('VITE_LOGO_MODULAR_HOMES_URL', '/logo/Logo-ModularHomes.png'),
+  logoUrl: withBase(getEnv('VITE_LOGO_URL', 'logo/Logo.png')),
+  ModularHomesUrl: withBase(getEnv('VITE_MODULAR_HOMES_URL', 'logo/ModularHomes.png')),
+  LogoModularHomesUrl: withBase(getEnv('VITE_LOGO_MODULAR_HOMES_URL', 'logo/Logo-ModularHomes.png')),
+
   requestFormUrl: getEnv('VITE_FORM_REQUEST_URL', ''),
   sheetRequestsUrl: getEnv('VITE_SHEET_REQUESTS_URL', ''),
   sheetOffersUrl: getEnv('VITE_SHEET_OFFERS_URL', ''),
+
   contactAddress: getEnv('VITE_CONTACT_ADDRESS', 'Dirección no configurada'),
   contactPhone: getEnv('VITE_CONTACT_PHONE', 'Teléfono no configurado'),
   contactEmail: getEnv('VITE_CONTACT_EMAIL', 'Email no configurado'),
+
   companyWebsite: getEnv('VITE_COMPANY_WEBSITE', 'https://www.ejemplo.com'),
   companySocial: getEnv('VITE_COMPANY_SOCIAL', 'https://www.linkedin.com'),
 }
