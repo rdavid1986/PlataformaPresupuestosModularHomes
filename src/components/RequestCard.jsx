@@ -65,8 +65,8 @@ function RequestCard({ request, associatedOffers = [] }) {
       </div>
 
       {associatedOffers.length > 0 && (
-        <div className="associated-offers-section">
-          <div className="associated-offers-header justify-content-right">
+        <div className="">
+          <div className="  margin-left">
             <h4>Ofertas relacionadas ({associatedOffers.length})</h4>
           </div>
           <div className="associated-offers-list margin-left">
