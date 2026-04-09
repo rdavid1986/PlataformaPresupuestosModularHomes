@@ -45,7 +45,7 @@ function WelcomeModal() {
 
         <div className="welcome-modal-body">
           <p className="welcome-modal-text">
-            <strong> A la plataforma de pedidos de Modular Homes</strong>
+            <strong> Esta es la nueva plataforma de pedidos de presupuestos de Modular Homes</strong>
           </p>
 
           <div className="welcome-modal-features">
