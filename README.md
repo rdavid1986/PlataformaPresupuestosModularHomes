@@ -35,5 +35,7 @@ If the URLs are not configured, the app displays sample data so the UI remains f
 npm install
 npm run dev
 ```
+npm run build → genera la carpeta dist
+npm run deploy → sube dist a GitHub Pages
 
 Open the local Vite URL and use the cards to create requests, make offers, and refresh data manually.

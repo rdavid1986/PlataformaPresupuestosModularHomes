@@ -5,3 +5,6 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vQht3PHFRExhTv0mUkZpZFft7qSduqUu
 
 eslogan :
 plataforma donde se moldean acuerdos, se forjan relaciones comerciales y se funden las ofertas
+
+npm run build → genera la carpeta dist
+npm run deploy → sube dist a GitHub Pages

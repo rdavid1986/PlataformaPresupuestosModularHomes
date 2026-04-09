@@ -35,8 +35,8 @@ function Sidebar() {
       
 
       <div className="sidebar-footer">
-        <button type="button" className="button cta-button">Contactenos para crear su propio sitio web</button>
-        <a className="sidebar-link" href="https://docs.google.com/forms/d/e/1FAIpQLScYToCNvXaOpi6o8jSNBmkpDo0XATNkRhZD-XaFXH5fL15UWg/viewform?usp=dialog" target="_blank" rel="noreferrer">
+        
+        <a className="button create-offer-button cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLScYToCNvXaOpi6o8jSNBmkpDo0XATNkRhZD-XaFXH5fL15UWg/viewform?usp=dialog" target="_blank" rel="noreferrer">
           Crear pedido de presupuesto
         </a>
       </div>

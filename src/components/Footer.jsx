@@ -96,7 +96,7 @@ function Footer() {
 				<p className="footer-copyright">
 					© 2026 Modular Homes. Todos los derechos reservados.
 				</p>
-				<a href="#top" className="footer-top-link">
+				<a href="#top" className="button create-offer-button cta-button">
 					Subir ↑
 				</a>
 			</div>
