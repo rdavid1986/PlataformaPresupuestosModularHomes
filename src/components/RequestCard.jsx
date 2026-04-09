@@ -77,9 +77,9 @@ function RequestCard({ request, associatedOffers = [] }) {
         </div>
       )}
 
-      <footer className="request-footer">
+      <footer className="request-footer ">
         <button
-          className="create-offer-button"
+          className="create-offer-button "
           onClick={() => {
              window.open(request.offerFormLink) 
           }}

@@ -313,7 +313,7 @@ function Instructions() {
           <div className="limitation-item">
             <div className="limitation-icon">📈</div>
             <h3>Sin análisis comparativo</h3>
-            <p>No hay panel de comparación automática de ofertas. Los archivos excel no se pueden procesar sin backend para comprar precios en las ofertas automaticamente</p>
+            <p>No hay panel de comparación automática de ofertas.Esto requiere muchas horas mas de trabajo adicional en el projecto para su correcto funcionamiento.</p>
           </div>
 
           <div className="limitation-item">
@@ -321,6 +321,16 @@ function Instructions() {
             <h3>Dependencia de Google</h3>
             <p>Todo está alojado en los servicios de Google y la informacion no es privada</p>
           </div>
+          {/* <div className="limitation-item">
+            <div className="limitation-icon">📌</div>
+            <h3> Nota importante:</h3>
+            <p>Este es un projecto de prueba y demostracion con funciones no tan complejas de lo que se puede llegar a hacer.</p>
+          </div>
+          <div className="limitation-item">
+            <div className="limitation-icon">⏰</div>
+            <h3> tiempo invertido en desarrollar este projecto</h3>
+            <p>El tiempo en desarrollar esta plataforma simple y funcional fue de 45Hs</p>
+          </div> */}
         </div>
       </section>
 
