@@ -40,7 +40,7 @@ function App() {
 			</div>
 
 			{/* Modal fuera del flujo del layout */}
-			{/* <WelcomeModal /> */}
+			<WelcomeModal />
 		</>
 	);
 }

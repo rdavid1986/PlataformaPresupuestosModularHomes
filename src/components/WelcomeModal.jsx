@@ -45,7 +45,7 @@ function WelcomeModal() {
 
         <div className="welcome-modal-body">
           <p className="welcome-modal-text">
-            Prueba de ejemplo y demostración de la <strong>plataforma de pedidos de Modular Homes</strong>
+            <strong> A la plataforma de pedidos de Modular Homes</strong>
           </p>
 
           <div className="welcome-modal-features">
