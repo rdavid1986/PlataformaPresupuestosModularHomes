@@ -131,19 +131,20 @@ function Instructions() {
         <div className="steps-container">
           <div className="step-card">
             <div className="step-number">1</div>
-            <h3>Haz clic en "Crear pedido de presupuesto" en la seccion solicitar presupuesto</h3>
-            <p>Encontrarás este botón en la sección de Solicitudes.</p>
+            <h3>Haz clic en el boton "Crear pedido de presupuesto" en la seccion solicitar presupuesto.</h3>
+            <p>Serás redirigido a un formulario de Google Forms donde podrás ingresar toda la información de tu pedido.</p>
           </div>
 
           <div className="step-card">
             <div className="step-number">2</div>
-            <h3>Completa los campos obligatorios</h3>
+            <h3>Completa los campos del formulario de Goole Forms</h3>
             <ul className="step-list">
               <li>📧 <strong>Correo</strong>: Tu email de contacto</li>
               <li>🏢 <strong>Empresa</strong>: Nombre de tu empresa</li>
               <li>📌 <strong>Título</strong>: Nombre breve del pedido</li>
               <li>📄 <strong>Descripción</strong>: Detalles del proyecto</li>
               <li>📁 <strong>Archivo Excel</strong> (obligatorio): Sube especificaciones técnicas</li>
+              <li>📧 <strong>Correo</strong>: Metodo de contacto alternativo</li>
             </ul>
           </div>
 
@@ -178,7 +179,7 @@ function Instructions() {
                 <ol className="offer-steps">
                   <li>Ve a la sección <strong>"Ofertas de proveedores"</strong></li>
                   <li>Haz clic en <strong>"Crear oferta"</strong> arriba a la derecha</li>
-                  <li>Completa el formulario, <strong>deja vacío</strong> el campo <strong>"ID Pedido"</strong></li>
+                  <li>Completa el formulario de Google Forms, <strong>deja vacío</strong> el campo <strong>"ID Pedido"</strong></li>
                   <li>Se mostrará como oferta independiente en el sistema. Su funcion es la de mostrar nuevas ofertas en insumos de los proveedores que deseen publicar una nueva oferta.</li>
                 </ol>
               </div>
@@ -199,7 +200,7 @@ function Instructions() {
                 <ol className="offer-steps">
                   <li>En la tarjeta del <strong>pedido de presupuesto </strong> en el que quieras responder al pedido  con tu <strong>oferta, </strong></li>
                   <li>Haz clic en <strong>"Crear oferta"</strong> abajo a la derecha del <strong>pedido</strong></li>
-                  <li>Completa el formulario, <strong>no borres</strong> el campo <strong>"ID Pedido"</strong></li>
+                  <li>Completa el formulario de Google Forms, <strong>no borres</strong> el campo <strong>"ID Pedido"</strong></li>
                   <li>Tu oferta se vinculará automáticamente</li>
                 </ol>
               </div>
