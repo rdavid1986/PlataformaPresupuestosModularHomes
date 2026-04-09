@@ -51,14 +51,14 @@ function Header({ themeMode, onToggleTheme, searchQuery, onSearchChange }) {
             <span className="search-icon">🔍</span>
           </div>
           
-          <button 
+          {/* <button 
             className="theme-toggle" 
             onClick={onToggleTheme}
             aria-label="Cambiar tema"
             type="button"
           >
             {themeMode === 'dark' ? '☀️' : '🌙'}
-          </button>
+          </button> */}
 
           {/* Botón hamburguesa para menú mobile */}
           <button

@@ -1,29 +1,44 @@
-import { useEffect, useState } from 'react'
-import '../styles/welcomeModal.css'
+import { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import '../styles/welcomeModal.css';
 
 function WelcomeModal() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Mostrar modal solo si no se ha visto antes (usando localStorage)
-    const hasSeenWelcome = localStorage.getItem('welcome-modal-seen')
-    if (!hasSeenWelcome) {
-      setIsOpen(true)
-      localStorage.setItem('welcome-modal-seen', 'true')
-    }
-  }, [])
+    const checkHash = () => {
+      const hash = window.location.hash;
+      // Si el hash es #instructions o está vacío, mostrar el modal
+      const shouldOpen = hash === '#instructions' || hash === '' || hash === '#';
+      console.log('WelcomeModal: hash=', hash, 'shouldOpen=', shouldOpen); // Debug
+      setIsOpen(shouldOpen);
+    };
 
-  const handleClose = () => {
-    setIsOpen(false)
-  }
+    // Chequear inmediatamente
+    checkHash();
+    
+    // Chequear cuando cambia el hash
+    window.addEventListener('hashchange', checkHash);
+    
+    // Chequear después de un pequeño delay (por si hay problema de timing)
+    const timer = setTimeout(checkHash, 100);
 
-  if (!isOpen) return null
+    return () => {
+      window.removeEventListener('hashchange', checkHash);
+      clearTimeout(timer);
+    };
+  }, []);
 
-  return (
+  const handleClose = () => setIsOpen(false);
+
+  if (!isOpen) return null;
+
+  // Render en portal para asegurar que siempre esté por encima de todo
+  return ReactDOM.createPortal(
     <div className="welcome-modal-overlay" onClick={handleClose}>
       <div className="welcome-modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="welcome-modal-close" onClick={handleClose}>×</button>
-        
+
         <div className="welcome-modal-header">
           <h1>¡Bienvenidos!</h1>
         </div>
@@ -32,7 +47,7 @@ function WelcomeModal() {
           <p className="welcome-modal-text">
             Prueba de ejemplo y demostración de la <strong>plataforma de pedidos de Modular Homes</strong>
           </p>
-          
+
           <div className="welcome-modal-features">
             <div className="feature-item">
               <span className="feature-icon">📋</span>
@@ -55,8 +70,9 @@ function WelcomeModal() {
           </button>
         </div>
       </div>
-    </div>
-  )
+    </div>,
+    document.body
+  );
 }
 
-export default WelcomeModal
+export default WelcomeModal;

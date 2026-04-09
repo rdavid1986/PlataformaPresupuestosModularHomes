@@ -4,7 +4,7 @@ import { searchAll, searchRequests as searchRequestsUtil, searchOffers as search
 import RequestCard from './RequestCard'
 import OfferCard from './OfferCard'
 import Instructions from './Instructions'
-import WelcomeModal from './WelcomeModal'
+
 import Footer from './Footer'
 
 // ================================================
@@ -213,7 +213,6 @@ function Main({ searchQuery }) {
   if (activeSection === 'instructions') {
     return (
       <main className="main-content">
-        <WelcomeModal />
         <Instructions />
         <Footer />
       </main>
@@ -241,7 +240,7 @@ function Main({ searchQuery }) {
 
         <div className="metric-card metric-status justify-content">
           <p className="metric-label">Estado sitio web</p>
-          <strong className="status-ok">OPERATIVA</strong>
+          <strong className="status-ok">OPERATIVO</strong>
         </div>
       </div>
       

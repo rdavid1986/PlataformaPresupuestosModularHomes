@@ -1,4 +1,3 @@
-import '../styles/instructionsCard.css'
 
 function Instructions() {
   return (
@@ -23,26 +22,26 @@ function Instructions() {
           <p className="intro-text">
             Esta plataforma permite centralizar tus <strong>pedidos de presupuesto</strong> y recibir 
             <strong> ofertas de proveedores</strong> de manera organizada y eficiente. 
-            Olvídate de enviar mails manuales uno a uno y de perder tiempo administrando 
-            respuestas dispersas.
+            {/* Olvídate de enviar mails manuales uno a uno y de perder tiempo administrando 
+            respuestas dispersas. */}
           </p>
           <p className="intro-text">
-            Con nuestro sistema, todo está en un lugar: pedidos, ofertas, comparaciones y seguimiento.
+            Con nuestro sistema, todo está en un lugar: pedidos y ofertas.
           </p>
         </div>
       </section>
 
-      {/* ========================================
+      {/* {========================================
           SECCIÓN 1: ¿QUÉ PROBLEMA RESUELVE?
       ======================================== */}
-      <section className="instructions-section">
+      {/* {<section className="instructions-section">
         <h2 className="section-title">¿Qué problema resuelve?</h2>
         <p className="section-description">
           Descubre cómo cambiamos la forma de trabajar con proveedores
         </p>
 
         <div className="problem-solution-container">
-          {/* Problema Actual */}
+          
           <div className="problem-card">
             <div className="problem-icon">❌</div>
             <h3 className="problem-title">Situación actual (manual)</h3>
@@ -56,7 +55,7 @@ function Instructions() {
             </ul>
           </div>
 
-          {/* Solución */}
+          
           <div className="solution-card">
             <div className="solution-icon">✅</div>
             <h3 className="solution-title">Con nuestra plataforma</h3>
@@ -70,12 +69,12 @@ function Instructions() {
             </ul>
           </div>
         </div>
-      </section>
-
+      </section>}
+ */}
       {/* ========================================
           SECCIÓN 2: ESTRUCTURA DE LA PLATAFORMA
       ======================================== */}
-      <section className="instructions-section">
+      {/* <section className="instructions-section">
         <h2 className="section-title">Estructura de la plataforma</h2>
         <p className="section-description">
           Conoce cada parte de nuestro sistema
@@ -118,7 +117,7 @@ function Instructions() {
             <p>Enlaces institucionales de Modular Homes y navegación rápida a sitio oficial.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========================================
           SECCIÓN 3: CÓMO CREAR UN PEDIDO
@@ -126,14 +125,14 @@ function Instructions() {
       <section className="instructions-section">
         <h2 className="section-title">Cómo crear un pedido de presupuesto</h2>
         <p className="section-description">
-          Sigue estos pasos para generar un nuevo pedido
+          Sigue estos pasos para generar un nuevo pedido.
         </p>
 
         <div className="steps-container">
           <div className="step-card">
             <div className="step-number">1</div>
             <h3>Haz clic en "Crear pedido de presupuesto" en la seccion solicitar presupuesto</h3>
-            <p>Encontrarás este botón en el Header, Sidebar o en la sección de Solicitudes.</p>
+            <p>Encontrarás este botón en la sección de Solicitudes.</p>
           </div>
 
           <div className="step-card">
@@ -151,7 +150,7 @@ function Instructions() {
           <div className="step-card">
             <div className="step-number">3</div>
             <h3>Resultado</h3>
-            <p>Se genera automáticamente un pedido visible en la plataforma. Los proveedores registrados podrán verlo y enviar sus ofertas.</p>
+            <p>Se genera automáticamente un pedido visible en la plataforma. Los proveedores con acceso a la plataforma podrán verlo y enviar sus ofertas.</p>
           </div>
         </div>
       </section>
@@ -162,7 +161,7 @@ function Instructions() {
       <section className="instructions-section">
         <h2 className="section-title">Cómo crear una oferta</h2>
         <p className="section-description">
-          Existen dos tipos de ofertas: independientes y relacionadas a pedidos
+          Existen dos tipos de ofertas de proveedores: independientes y relacionadas a pedidos de presupuestos
         </p>
 
         <div className="offers-types-container">
@@ -170,17 +169,17 @@ function Instructions() {
           <div className="offer-type-card">
             <div className="offer-type-header individual">
               <div className="offer-type-icon">🎯</div>
-              <h3>Oferta Individual</h3>
+              <h3>Oferta Individual de proveedor</h3>
             </div>
             <div className="offer-type-content">
-              <p><strong>Cuándo usarla:</strong> Cuando quieres enviar una oferta independiente sin vincularla a un pedido específico.</p>
+              <p><strong>Cuándo usarla:</strong> Cuando quieres enviar una oferta independiente por actualizacion de precios sin vincularla a un pedido específico.</p>
               <div className="how-to">
                 <p><strong>Cómo crearla:</strong></p>
                 <ol className="offer-steps">
-                  <li>Ve a la sección <strong>"Ofertas"</strong></li>
-                  <li>Haz clic en <strong>"Crear oferta"</strong></li>
-                  <li><strong>Completa el formulario , deja vacío</strong> el campo "ID Pedido"</li>
-                  <li>Se mostrará como oferta independiente en el sistema. Su funcion es la de mostrar nuevas ofertas en insumos de los proveedores que deseen publicar una nueva oferta</li>
+                  <li>Ve a la sección <strong>"Ofertas de proveedores"</strong></li>
+                  <li>Haz clic en <strong>"Crear oferta"</strong> arriba a la derecha</li>
+                  <li>Completa el formulario, <strong>deja vacío</strong> el campo <strong>"ID Pedido"</strong></li>
+                  <li>Se mostrará como oferta independiente en el sistema. Su funcion es la de mostrar nuevas ofertas en insumos de los proveedores que deseen publicar una nueva oferta.</li>
                 </ol>
               </div>
             </div>
@@ -193,14 +192,14 @@ function Instructions() {
               <h3>Oferta Relacionada</h3>
             </div>
             <div className="offer-type-content">
-              <p><strong>Es para proveedores:</strong> Los proveedores responden a un pedido de presupuesto específico con su oferta de insumos.</p>
+              <p>Los proveedores responden a un pedido de presupuesto específico con su oferta de insumos.</p>
               <p><strong>Cuándo usarla:</strong> Cuando tienes una oferta para dar a un pedido de presupuesto.</p>
               <div className="how-to">
                 <p><strong>Cómo crearla:</strong></p>
                 <ol className="offer-steps">
-                  <li>En la tarjeta del <strong>pedido </strong>en que quieras publicar tu <strong>oferta.</strong>Tocando el boton <strong>Crear oferta </strong></li>
-                  <li>Haz clic en <strong>"Crear oferta"</strong> abajo a la derecha en la card del <strong>pedido</strong></li>
-                  <li>Localiza el campo "ID Pedido" (ya estará cargado no debes modificar ese campo)</li>
+                  <li>En la tarjeta del <strong>pedido de presupuesto </strong> en el que quieras responder al pedido  con tu <strong>oferta, </strong></li>
+                  <li>Haz clic en <strong>"Crear oferta"</strong> abajo a la derecha del <strong>pedido</strong></li>
+                  <li>Completa el formulario, <strong>no borres</strong> el campo <strong>"ID Pedido"</strong></li>
                   <li>Tu oferta se vinculará automáticamente</li>
                 </ol>
               </div>
@@ -208,8 +207,7 @@ function Instructions() {
           </div>
         </div>
 
-        {/* Advertencia */}
-        <div className="warning-box">
+        {/* <div className="warning-box">
           <div className="warning-icon">⚠️</div>
           <h3 className="warning-title">Advertencia importante</h3>
           <p className="warning-text">
@@ -217,7 +215,7 @@ function Instructions() {
             la oferta pierde su vínculo con el pedido original y se verá como oferta independiente. 
             Esto puede causar desorden y pérdida de seguimiento.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* ========================================
@@ -269,12 +267,12 @@ function Instructions() {
           </div>
         </div>
 
-        <div className="important-note">
+        {/* <div className="important-note">
           <p>
             <strong>📌 Nota:</strong> Este sistema es un <strong>prototipo funcional y completamente operativo</strong>. 
             Demuestra que el concepto funciona, pero está diseñado para escalar hacia una solución empresarial completa , funciona solo a modo de ejemplo práctico y demostracion.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* ========================================
@@ -283,7 +281,7 @@ function Instructions() {
       <section className="instructions-section limitations-section">
         <h2 className="section-title">Limitaciones actuales</h2>
         <p className="section-description">
-          Lo que el sistema actual NO incluye (pero podría en una versión mejorada)
+          Lo que el sistema actual NO incluye 
         </p>
 
         <div className="limitations-grid">
@@ -314,7 +312,7 @@ function Instructions() {
           <div className="limitation-item">
             <div className="limitation-icon">📈</div>
             <h3>Sin análisis comparativo</h3>
-            <p>No hay panel de comparación automática de ofertas</p>
+            <p>No hay panel de comparación automática de ofertas. Los archivos excel no se pueden procesar sin backend para comprar precios en las ofertas automaticamente</p>
           </div>
 
           <div className="limitation-item">
@@ -328,7 +326,7 @@ function Instructions() {
       {/* ========================================
           SECCIÓN 7: POSIBLES FUNCIONALIDADES (PROYECTO COMPLETO)
       ======================================== */}
-      <section className="instructions-section features-section">
+      {/* <section className="instructions-section features-section">
         <h2 className="section-title">Visión del proyecto completo</h2>
         <p className="section-description">
           Las funcionalidades avanzadas que podrían transformar tu operación
@@ -401,12 +399,12 @@ function Instructions() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========================================
           SECCIÓN 8: TECNOLOGÍA PROPUESTA
       ======================================== */}
-      <section className="instructions-section tech-section">
+      {/* <section className="instructions-section tech-section">
         <h2 className="section-title">Tecnología propuesta</h2>
         <p className="section-description">
           Stack tecnológico para una solución empresarial robusta
@@ -468,12 +466,12 @@ function Instructions() {
           </p>
           
         </div>
-      </section>
+      </section> */}
 
       {/* ========================================
           SECCIÓN 9: TIEMPO DE DESARROLLO
       ======================================== */}
-      <section className="instructions-section timeline-section">
+      {/* <section className="instructions-section timeline-section">
         <h2 className="section-title">Tiempo de desarrollo</h2>
         <p className="section-description">
           Estimación para equipo desarrolladores
@@ -532,12 +530,12 @@ function Instructions() {
             <p>Dependiendo de complejidad adicional, requisitos específicos y cambios durante el desarrollo.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========================================
           SECCIÓN 10: CONCLUSIÓN (ENFOQUE COMERCIAL)
       ======================================== */}
-      <section className="instructions-section conclusion-section">
+      {/* <section className="instructions-section conclusion-section">
         <h2 className="section-title">Conclusión: Transformación operativa</h2>
         <p className="section-description">
           Por qué tu negocio necesita esta solución ahora
@@ -609,7 +607,7 @@ function Instructions() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
   )
 }

@@ -26,23 +26,23 @@ function RequestCard({ request, associatedOffers = [] }) {
         </div>}
         
 
-        <div className="detail-item">
+        <div className="detail-item request-detail-item">
           <span className="detail-label ">Titulo del pedido</span>
           <p>{request.projectName || "Sin empresa especificada"}</p>
         </div>
 
-        <div className="detail-item">
+        <div className="detail-item request-detail-item">
           <span className="detail-label">Fecha y hora de creación</span>
           <p>{request.createdAt || 'Sin fecha'}</p>
         </div>
 
-        <div className="detail-item">
+        <div className="detail-item request-detail-item">
           <span className="detail-label">Descripción</span>
           <p>{request.description || 'Sin descripción'}</p>
         </div>
         
-        <div className="detail-item wide">
-          <span className="detail-label">Adjuntos</span>
+        <div className="detail-item request-detail-item">
+          <span className="detail-label ">Adjuntos</span>
           {attachments.length > 0 ? (
             <div className="attachment-list">
               {attachments.map((link, index) => (

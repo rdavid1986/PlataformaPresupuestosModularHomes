@@ -1,3 +1,9 @@
+/* Fix para forzar visibilidad del modal en desktop */
+html, body {
+  overflow: visible !important;
+  height: 100% !important;
+  position: static !important;
+}
 /* 
   Welcome Modal Styles
   Modal de bienvenida elegante y profesional
@@ -10,11 +16,14 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
   animation: fadeIn 0.3s ease;
+  visibility: visible !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 @keyframes fadeIn {

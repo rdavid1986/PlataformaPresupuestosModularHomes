@@ -33,7 +33,8 @@ export const appConfig = {
 
 export const getThemeVars = (mode = 'light') => {
   const prefix = mode === 'dark' ? 'VITE_DARK_' : 'VITE_'
-  return {
+
+  const vars = {
     '--color-bg': getEnv(`${prefix}COLOR_BG`, mode === 'dark' ? '#0d1f33' : '#dae4ed'),
     '--color-panel': getEnv(`${prefix}COLOR_PANEL`, mode === 'dark' ? '#1a2a3f' : '#2f4158'),
     '--color-card': getEnv(`${prefix}COLOR_CARD`, mode === 'dark' ? '#162436' : '#ffffff'),
@@ -46,5 +47,14 @@ export const getThemeVars = (mode = 'light') => {
     '--color-card-alt': getEnv(`${prefix}COLOR_CARD_ALT`, mode === 'dark' ? '#1a2f45' : '#f8fafc'),
     '--color-footer': getEnv(`${prefix}COLOR_FOOTER`, mode === 'dark' ? '#0a1729' : '#ffffff'),
     '--color-footer-text': getEnv(`${prefix}COLOR_FOOTER_TEXT`, mode === 'dark' ? '#cbd6e8' : '#5d6680'),
+  }
+
+  // Alias para compatibilidad con CSS existente
+  return {
+    ...vars,
+    '--border': vars['--color-border'],
+    '--color-primary': vars['--color-accent'],
+    '--color-secondary': vars['--color-accent'],
+    '--color-text-light': vars['--color-text-muted'],
   }
 }

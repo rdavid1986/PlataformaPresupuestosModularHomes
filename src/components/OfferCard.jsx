@@ -11,7 +11,7 @@ function OfferCard({ offer, inline = false }) {
   const cardClass = inline ? "offer-card inline" : "offer-card";
 
   return (
-    <article className={cardClass}>
+    <article className="offer-card ">
       <header className="offer-header">
         <h1>Oferta : {offer.projectName || "Sin Titulo"}</h1>
         <br />
@@ -20,7 +20,7 @@ function OfferCard({ offer, inline = false }) {
       </header>
 
       <div className="offer-details-grid">
-        <div className="offer-detail-item full-width">
+        <div className="offer-detail-item ">
           <span className="detail-label ">Proveedor / Empresa</span>
           <p className="personalized-font-size">{offer.provider || "Sin proveedor especificado"}</p>
         </div>
